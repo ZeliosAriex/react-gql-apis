@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reach/router": "^1.3.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -25,6 +26,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@types/reach__router": "^1.3.7",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "eslint": "^7.25.0",
@@ -37,9 +39,9 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-sonarjs": "^0.7.0",
+    "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1",
-    "husky": "^6.0.0"
+    "prettier": "^2.2.1"
   },
   "lint-staged": {
     "./**/*.{js,jsx,ts,tsx}": [
