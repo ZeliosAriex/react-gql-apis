@@ -1,11 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { ThemeProvider } from '@emotion/react'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { appTheme } from './styles/theme'
+import './styles'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={appTheme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
