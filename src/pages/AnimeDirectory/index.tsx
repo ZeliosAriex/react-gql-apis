@@ -1,16 +1,16 @@
-import { Link } from '@reach/router'
 import React from 'react'
+import { Link } from '@reach/router'
 import Title from '../../components/shared/Title'
 import { PageBaseProps } from '../../types'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const HomePage = (props: PageBaseProps): JSX.Element => {
+const AnimeDirectoryPage = (props: PageBaseProps): JSX.Element => {
   return (
     <>
-      <Title>Home</Title>
-      <Link to='/anime'>Go to anime directory</Link>
+      <Title>AnimeDirectoryPage</Title>
+      <Link to='/'>Go to home</Link>
     </>
   )
 }
 
-export default HomePage
+export default AnimeDirectoryPage
