@@ -26,13 +26,16 @@ export const appTheme: Theme = {
     backgroundLight: '#ffffff',
     inputBackground: '#EFF0F6',
   },
+
+  transitions: {
+    color: 'color .3s ease-out',
+    backgroundColor: 'background-color .3s ease-out',
+    fill: 'fill 0.3s ease-out',
+  },
 }
 
 export const appDarkTheme: Theme = {
-  fonts: {
-    baseSize: '16px',
-  },
-
+  ...appTheme,
   colors: {
     primary: '#BCA4FF',
     primaryDark: '#5E38C9',

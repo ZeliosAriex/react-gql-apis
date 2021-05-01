@@ -28,6 +28,11 @@ export const GlobalStyle = ({ theme }: GlobalStyleProps): JSX.Element => {
       background-color: ${theme.colors.background};
       color: ${theme.colors.title};
       height: 100%;
+      transition: ${theme.transitions.backgroundColor};
+    }
+
+    path {
+      transition: ${theme.transitions.fill};
     }
 
     *,
@@ -39,6 +44,7 @@ export const GlobalStyle = ({ theme }: GlobalStyleProps): JSX.Element => {
     a {
       text-decoration: none;
       color: ${theme.colors.primary};
+      transition: ${theme.transitions.color};
 
       &:hover {
         text-decoration: underline;

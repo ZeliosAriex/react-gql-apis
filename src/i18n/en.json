@@ -2,6 +2,14 @@
   "general": {
     "appTitle": "GraphQL APIs"
   },
+  "routes": {
+    "anime": {
+      "name": "Anime"
+    },
+    "countries": {
+      "name": "Countries"
+    }
+  },
   "pages": {
     "home": {
       "title": "Home"

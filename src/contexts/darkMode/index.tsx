@@ -1,23 +1,20 @@
 import React, { createContext, PropsWithChildren, useEffect } from 'react'
 import { ContextType } from './types'
 import { useToggle } from '../../hooks/useToggle'
-import { useLocalStorage } from '../../hooks/useLocalStorage'
+import { LS_DARKMODE_KEY } from '../../util/constants'
 
 const DarkModeContext = createContext<ContextType>({} as ContextType)
 
 const DarkModeProvider = ({
   children,
 }: PropsWithChildren<unknown>): JSX.Element => {
-  const [persistedDarkMode, setPersistedDarkMode] = useLocalStorage<boolean>(
-    'darkMode',
-    false
-  )
+  // Not using useLocalStorage hook because it triggers unnecesary render
+  const persistedDarkMode = localStorage.getItem(LS_DARKMODE_KEY) === 'true'
   const [darkMode, toggleDarkMode] = useToggle(persistedDarkMode)
 
   useEffect(() => {
-    setPersistedDarkMode(darkMode)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [darkMode, setPersistedDarkMode])
+    localStorage.setItem(LS_DARKMODE_KEY, darkMode.toString())
+  }, [darkMode])
 
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>

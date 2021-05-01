@@ -1,19 +1,16 @@
-/** @jsxImportSource @emotion/react */
 import React from 'react'
-import { useTranslation } from 'react-i18next'
+import { Link } from '@reach/router'
 import Title from '../../components/shared/Title'
 import { PageBaseProps } from '../../types'
 import DefaultLayout from '../_layouts/Default'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const HomePage = (props: PageBaseProps): JSX.Element => {
-  const { t } = useTranslation()
-
+const CountriesDirectoryPage = (props: PageBaseProps): JSX.Element => {
   return (
     <DefaultLayout>
-      <Title>{t('pages.home.title')}</Title>
+      <Title>CountriesDirectoryPage</Title>
     </DefaultLayout>
   )
 }
 
-export default HomePage
+export default CountriesDirectoryPage

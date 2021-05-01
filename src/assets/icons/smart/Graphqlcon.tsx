@@ -1,16 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useContext } from 'react'
-import { BaseProps } from '../../types'
-import { DarkModeContext } from '../../contexts/darkMode'
+import { DarkModeContext } from '../../../contexts/darkMode'
+import { SvgProps } from './types'
 
-type GraphqlconProps = BaseProps & {
-  fill?: string
-}
-
-export const Graphqlcon = ({
-  fill = '#e10098',
-  className,
-}: GraphqlconProps) => {
+export const Graphqlcon = ({ fill = '#e10098', className }: SvgProps) => {
   const { darkMode } = useContext(DarkModeContext)
 
   return (
