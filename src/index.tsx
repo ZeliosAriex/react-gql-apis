@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import './styles'
 import { DarkModeProvider } from './contexts/darkMode'
+import './styles'
+import './i18n'
 
 ReactDOM.render(
   <React.StrictMode>
