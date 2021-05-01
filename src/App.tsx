@@ -1,17 +1,19 @@
-import React from 'react'
-import { useTheme } from '@emotion/react'
+import React, { useContext } from 'react'
+import { ThemeProvider } from '@emotion/react'
 import { GlobalStyle } from './styles/global'
 import Routes from './routes'
+import { appDarkTheme, appTheme } from './styles/theme'
+import { DarkModeContext } from './contexts/darkMode'
 
 const App = (): JSX.Element => {
-  // We use this hook to customize the global app styles based on the theme
-  const appTheme = useTheme()
+  const { darkMode } = useContext(DarkModeContext)
+  const theme = darkMode ? appDarkTheme : appTheme
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Routes />
-      <GlobalStyle theme={appTheme} />
-    </>
+      <GlobalStyle theme={theme} />
+    </ThemeProvider>
   )
 }
 

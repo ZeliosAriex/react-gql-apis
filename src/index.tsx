@@ -1,16 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { ThemeProvider } from '@emotion/react'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { appTheme } from './styles/theme'
 import './styles'
+import { DarkModeProvider } from './contexts/darkMode'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={appTheme}>
+    <DarkModeProvider>
       <App />
-    </ThemeProvider>
+    </DarkModeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
