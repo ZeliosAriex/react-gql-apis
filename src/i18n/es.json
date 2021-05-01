@@ -1,0 +1,10 @@
+{
+  "general": {
+    "appTitle": "GraphQL APIs"
+  },
+  "pages": {
+    "home": {
+      "title": "Inicio"
+    }
+  }
+}
