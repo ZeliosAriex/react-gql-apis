@@ -9,7 +9,7 @@ const AnimeDirectoryPage = lazy(() => import('../pages/AnimeDirectory'))
 const Routes = (): JSX.Element => {
   return (
     <Suspense fallback={<Spinner />}>
-      <Router>
+      <Router id='root-router'>
         <HomePage path='/' />
         <AnimeDirectoryPage path='/anime' />
       </Router>

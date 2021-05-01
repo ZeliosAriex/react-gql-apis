@@ -23,6 +23,7 @@ export const appTheme: Theme = {
     placeholder: '#A0A3BD',
 
     background: '#F7F7FC',
+    backgroundLight: '#ffffff',
     inputBackground: '#EFF0F6',
   },
 }
@@ -34,7 +35,7 @@ export const appDarkTheme: Theme = {
 
   colors: {
     primary: '#BCA4FF',
-    primaryDark: '#2A00A2',
+    primaryDark: '#5E38C9',
     secondary: '#82E9FF',
     secondaryDark: '#0096B7',
     error: '#FF84B7',
@@ -50,6 +51,7 @@ export const appDarkTheme: Theme = {
     placeholder: '#A0A3BD',
 
     background: '#121212',
+    backgroundLight: '#1a1a1a',
     inputBackground: '#EFF0F6',
   },
 }

@@ -15,6 +15,7 @@ export const GlobalStyle = ({ theme }: GlobalStyleProps): JSX.Element => {
     html {
       box-sizing: border-box;
       font-size: ${theme.fonts.baseSize};
+      height: 100%;
     }
 
     body {
@@ -26,6 +27,7 @@ export const GlobalStyle = ({ theme }: GlobalStyleProps): JSX.Element => {
       -moz-osx-font-smoothing: grayscale;
       background-color: ${theme.colors.background};
       color: ${theme.colors.title};
+      height: 100%;
     }
 
     *,
@@ -34,22 +36,30 @@ export const GlobalStyle = ({ theme }: GlobalStyleProps): JSX.Element => {
       box-sizing: inherit;
     }
 
-    /* With this we can increase lightly all the components based on the screen size */
-    ${mq.sm} {
-      html {
-        font-size: calc(${theme.fonts.baseSize} + 2px);
+    a {
+      text-decoration: none;
+      color: ${theme.colors.primary};
+
+      &:hover {
+        text-decoration: underline;
+        color: ${theme.colors.primaryDark};
       }
     }
 
-    ${mq.lg} {
-      html {
-        font-size: calc(${theme.fonts.baseSize} + 4px);
-      }
+    #root {
+      height: 100%;
     }
+
+    // Workaround: Reach router adds this element, i want to target it to set his height
+    #root-router {
+      height: 100%;
+    }
+
+    /* With this we can increase lightly all the components based on the screen size */
 
     ${mq.xl} {
       html {
-        font-size: calc(${theme.fonts.baseSize} + 6px);
+        font-size: calc(${theme.fonts.baseSize} + 2px);
       }
     }
   `
