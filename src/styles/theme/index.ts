@@ -6,8 +6,8 @@ export const appTheme: Theme = {
   },
 
   colors: {
-    primary: '#5F2EEA',
-    primaryDark: '#2A00A2',
+    primary: '#2EEACB',
+    primaryDark: '#00A287',
     secondary: '#1CC8EE',
     secondaryDark: '#0096B7',
     error: '#ED2E7E',
@@ -37,8 +37,8 @@ export const appTheme: Theme = {
 export const appDarkTheme: Theme = {
   ...appTheme,
   colors: {
-    primary: '#BCA4FF',
-    primaryDark: '#5E38C9',
+    primary: '#A4FFF0',
+    primaryDark: '#00A287',
     secondary: '#82E9FF',
     secondaryDark: '#0096B7',
     error: '#FF84B7',
@@ -49,7 +49,7 @@ export const appDarkTheme: Theme = {
     warningDark: '#946200',
 
     title: '#F7F7FC',
-    body: '#4E4B66',
+    body: '#65637A',
     label: '#6E7191',
     placeholder: '#A0A3BD',
 

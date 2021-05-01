@@ -12,7 +12,17 @@
   },
   "pages": {
     "home": {
-      "title": "Home"
+      "title": "Welcome to GraphQL APIs",
+      "shortTitle": "Home",
+      "subtitle": "A React app that queries GraphQL APIs"
+    },
+    "anime": {
+      "title": "Anime Directory",
+      "shortTitle": "Anime"
+    },
+    "countries": {
+      "title": "Countries Directory",
+      "shortTitle": "Countries"
     }
   }
 }
