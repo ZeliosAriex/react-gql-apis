@@ -42,6 +42,7 @@
     "import/prefer-default-export": "off",
     "no-param-reassign": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/require-default-props": "off",
     "prettier/prettier": [
       "error",
       {
