@@ -26,3 +26,30 @@ export const appTheme: Theme = {
     inputBackground: '#EFF0F6',
   },
 }
+
+export const appDarkTheme: Theme = {
+  fonts: {
+    baseSize: '16px',
+  },
+
+  colors: {
+    primary: '#BCA4FF',
+    primaryDark: '#2A00A2',
+    secondary: '#82E9FF',
+    secondaryDark: '#0096B7',
+    error: '#FF84B7',
+    errorDark: '#C30052',
+    success: '#34EAB9',
+    successDark: '#00966D',
+    warning: '#FFD789',
+    warningDark: '#946200',
+
+    title: '#F7F7FC',
+    body: '#4E4B66',
+    label: '#6E7191',
+    placeholder: '#A0A3BD',
+
+    background: '#121212',
+    inputBackground: '#EFF0F6',
+  },
+}
