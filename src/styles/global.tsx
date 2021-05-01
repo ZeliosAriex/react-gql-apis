@@ -36,11 +36,21 @@ export const GlobalStyle = ({ theme }: GlobalStyleProps): JSX.Element => {
       box-sizing: inherit;
     }
 
+    a {
+      text-decoration: none;
+      color: ${theme.colors.primary};
+
+      &:hover {
+        text-decoration: underline;
+        color: ${theme.colors.primaryDark};
+      }
+    }
+
     #root {
       height: 100%;
     }
 
-    // Workaround: Reach router adds this element i want to target it to set his height
+    // Workaround: Reach router adds this element, i want to target it to set his height
     #root-router {
       height: 100%;
     }

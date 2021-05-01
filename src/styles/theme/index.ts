@@ -35,7 +35,7 @@ export const appDarkTheme: Theme = {
 
   colors: {
     primary: '#BCA4FF',
-    primaryDark: '#2A00A2',
+    primaryDark: '#5E38C9',
     secondary: '#82E9FF',
     secondaryDark: '#0096B7',
     error: '#FF84B7',
