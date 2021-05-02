@@ -1,6 +1,6 @@
 {
   "name": "react-gql-apis",
-  "version": "0.3.0-a",
+  "version": "0.3.1-a",
   "author": "Omar del Real Ouldam",
   "private": true,
   "dependencies": {
