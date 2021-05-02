@@ -7,9 +7,10 @@ import Title from '../../components/shared/Title'
 import { PageBaseProps } from '../../types'
 import DefaultLayout from '../_layouts/Default'
 import SubTitle from '../../components/shared/SubTitle'
+import Spacer from '../../components/shared/Spacer'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const HomePage = (props: PageBaseProps): JSX.Element => {
+const HomePage = (props: PageBaseProps) => {
   const { t } = useTranslation()
 
   const titleStyles = {
@@ -22,6 +23,7 @@ const HomePage = (props: PageBaseProps): JSX.Element => {
       <Title css={{ ...titleStyles, marginTop: '2rem' }}>
         {t('pages.home.title')}
       </Title>
+      <Spacer size='1rem' />
       <SubTitle css={titleStyles}>{t('pages.home.subtitle')}</SubTitle>
     </DefaultLayout>
   )

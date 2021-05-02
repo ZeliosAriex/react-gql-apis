@@ -2,13 +2,20 @@ import { Dispatch, Reducer } from 'react'
 import { AsyncActionHandlers } from 'use-reducer-async'
 import { BaseState } from '../types'
 
-export type Country = {
-  code: string
-  name: string
-  capital: string
+export type Anime = {
+  id: number
+  title: {
+    english: string
+    romaji: string
+    native: string
+  }
+  format: string
+  status: string
+  popularity: number
+  countryOfOrigin: string
 }
 
-export type State = BaseState<Country>
+export type State = BaseState<Anime>
 
 /**
  * This are normal syncronous actions
@@ -21,19 +28,19 @@ export type InnerActions = any
  * This are syncronous actions that will be triggered from a thunk
  */
 export type OuterActions =
-  | { type: 'START_FETCH_COUNTRIES' }
-  | { type: 'FINISH_FETCH_COUNTRIES'; payload: Country[] }
-  | { type: 'ERROR_FETCH_COUNTRIES'; payload: string }
+  | { type: 'START_FETCH_ANIME' }
+  | { type: 'FINISH_FETCH_ANIME'; payload: Anime[] }
+  | { type: 'ERROR_FETCH_ANIME'; payload: string }
 
 /**
  * This are asyncronous actions used to run a thunk
  */
-export type AsyncAction = { type: 'FETCH_COUNTRIES' }
+export type AsyncAction = { type: 'FETCH_ANIME' }
 
 export type Action = InnerActions | OuterActions | AsyncAction
 
 export type Actions = {
-  fetchCountries: () => Action
+  fetchAnime: () => Action
 }
 
 export type AsyncActionHandlerType = AsyncActionHandlers<

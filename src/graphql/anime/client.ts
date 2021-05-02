@@ -6,22 +6,22 @@ import {
   InMemoryCache,
 } from '@apollo/client'
 
-const URL = process.env.REACT_APP_COUNTRIES_API_URL
+const URL = process.env.REACT_APP_ANIME_API_URL
 
 const httpLink = createHttpLink({
   uri: URL,
 })
 
-export const countryApolloClient = new ApolloClient({
+export const animeApolloClient = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache(),
 })
 
-export const countryQuery = async <T>(
+export const animeQuery = async <T>(
   query: DocumentNode
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ): Promise<ApolloQueryResult<T>> =>
-  countryApolloClient.query({
+  animeApolloClient.query({
     query,
     fetchPolicy: 'network-only',
   })

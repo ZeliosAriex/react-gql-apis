@@ -10,7 +10,7 @@ type GlobalStyleProps = {
 /**
  * Used for global app styles
  */
-export const GlobalStyle = ({ theme }: GlobalStyleProps): JSX.Element => {
+export const GlobalStyle = ({ theme }: GlobalStyleProps) => {
   const styles = css`
     html {
       box-sizing: border-box;

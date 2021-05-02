@@ -19,11 +19,18 @@
     },
     "anime": {
       "title": "Anime Directory",
-      "shortTitle": "Anime"
+      "shortTitle": "Anime",
+      "subtitle": "A list of the most popular anime of the moment"
     },
     "countries": {
       "title": "Countries Directory",
-      "shortTitle": "Countries"
+      "shortTitle": "Countries",
+      "subtitle": "All the countries of the world"
+    },
+    "rickAndMorty": {
+      "title": "Rick and Morty",
+      "shortTitle": "Rick and Morty",
+      "subtitle": "All the information about my favorite sitcom"
     }
   },
   "errors": {

@@ -5,9 +5,9 @@ import { initialState } from './initialState'
 import { asyncActionHandlers } from './thunks'
 import { reducer } from './reducer'
 
-const CountriesContext = createContext<ContextType>({} as ContextType)
+const AnimeContext = createContext<ContextType>({} as ContextType)
 
-const CountriesProvider = ({ children }: PropsWithChildren<unknown>) => {
+const AnimeProvider = ({ children }: PropsWithChildren<unknown>) => {
   const [state, dispatch] = useReducerAsync<ContextReducer, AsyncAction>(
     reducer,
     initialState,
@@ -15,10 +15,10 @@ const CountriesProvider = ({ children }: PropsWithChildren<unknown>) => {
   )
 
   return (
-    <CountriesContext.Provider value={{ state, dispatch }}>
+    <AnimeContext.Provider value={{ state, dispatch }}>
       {children}
-    </CountriesContext.Provider>
+    </AnimeContext.Provider>
   )
 }
 
-export { CountriesContext, CountriesProvider }
+export { AnimeContext, AnimeProvider }
