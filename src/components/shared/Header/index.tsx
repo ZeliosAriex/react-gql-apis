@@ -3,7 +3,6 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { LinkGetProps } from '@reach/router'
 import * as S from './styles'
-
 import DarkModeButton from '../DarkModeButton'
 import LangButton from '../LangButton'
 import useRoutes from '../../../routes/hooks/useRoutes'

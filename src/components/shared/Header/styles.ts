@@ -37,7 +37,6 @@ export const BrandLogo = styled(Graphqlcon)`
 export const BrandTitle = styled.span`
   font-family: 'Rubik', sans-serif;
   font-size: 1em;
-  font-weight: bold;
 
   ${mq.md} {
     font-size: 1.313rem;

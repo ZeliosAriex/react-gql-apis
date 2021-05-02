@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles'
 
-const Spinner = (): JSX.Element => {
+const Spinner = () => {
   return (
     <S.Wrapper>
       <S.Circle delay='-1s' />

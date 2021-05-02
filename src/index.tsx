@@ -8,19 +8,22 @@ import { DarkModeProvider } from './contexts/darkMode'
 import './styles'
 import './i18n'
 import { CountriesProvider } from './contexts/countries'
+import { AnimeProvider } from './contexts/anime'
 
 ReactDOM.render(
   <React.StrictMode>
     <HelmetProvider>
       <DarkModeProvider>
-        <CountriesProvider>
-          <Helmet
-            titleTemplate='%s | GraphQL APIs'
-            defaultTitle='GraphQL APIs'
-          />
-          <Toaster position='bottom-center' />
-          <App />
-        </CountriesProvider>
+        <AnimeProvider>
+          <CountriesProvider>
+            <Helmet
+              titleTemplate='%s | GraphQL APIs'
+              defaultTitle='GraphQL APIs'
+            />
+            <Toaster position='bottom-center' />
+            <App />
+          </CountriesProvider>
+        </AnimeProvider>
       </DarkModeProvider>
     </HelmetProvider>
   </React.StrictMode>,

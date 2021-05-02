@@ -5,9 +5,7 @@ import { LS_DARKMODE_KEY } from '../../utils/constants'
 
 const DarkModeContext = createContext<ContextType>({} as ContextType)
 
-const DarkModeProvider = ({
-  children,
-}: PropsWithChildren<unknown>): JSX.Element => {
+const DarkModeProvider = ({ children }: PropsWithChildren<unknown>) => {
   // Not using useLocalStorage hook because it triggers unnecesary render
   const persistedDarkMode = localStorage.getItem(LS_DARKMODE_KEY) === 'true'
   const [darkMode, toggleDarkMode] = useToggle(persistedDarkMode)

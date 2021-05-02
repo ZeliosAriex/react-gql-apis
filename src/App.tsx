@@ -5,7 +5,7 @@ import Routes from './routes'
 import { appDarkTheme, appTheme } from './styles/theme'
 import { DarkModeContext } from './contexts/darkMode'
 
-const App = (): JSX.Element => {
+const App = () => {
   const { darkMode } = useContext(DarkModeContext)
   const theme = darkMode ? appDarkTheme : appTheme
 
