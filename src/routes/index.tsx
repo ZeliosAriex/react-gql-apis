@@ -7,7 +7,7 @@ const HomePage = lazy(() => import('../pages/Home'))
 const AnimeDirectoryPage = lazy(() => import('../pages/AnimeDirectory'))
 const CountriesDirectoryPage = lazy(() => import('../pages/CountriesDirectory'))
 
-const Routes = (): JSX.Element => {
+const Routes = () => {
   return (
     <Suspense fallback={<Spinner />}>
       <Router>

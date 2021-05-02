@@ -7,9 +7,7 @@ import { reducer } from './reducer'
 
 const CountriesContext = createContext<ContextType>({} as ContextType)
 
-const CountriesProvider = ({
-  children,
-}: PropsWithChildren<unknown>): JSX.Element => {
+const CountriesProvider = ({ children }: PropsWithChildren<unknown>) => {
   const [state, dispatch] = useReducerAsync<ContextReducer, AsyncAction>(
     reducer,
     initialState,

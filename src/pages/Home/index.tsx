@@ -9,7 +9,7 @@ import DefaultLayout from '../_layouts/Default'
 import SubTitle from '../../components/shared/SubTitle'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const HomePage = (props: PageBaseProps): JSX.Element => {
+const HomePage = (props: PageBaseProps) => {
   const { t } = useTranslation()
 
   const titleStyles = {

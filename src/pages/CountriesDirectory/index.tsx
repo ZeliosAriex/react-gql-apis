@@ -8,7 +8,7 @@ import useFetchCountries from '../../contexts/countries/hooks/useFetchCountries'
 import AsyncDataDisplayer from '../../components/shared/AsyncDataDisplayer'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const CountriesDirectoryPage = (props: PageBaseProps): JSX.Element => {
+const CountriesDirectoryPage = (props: PageBaseProps) => {
   const { t } = useTranslation()
   const { data, error } = useFetchCountries()
 
