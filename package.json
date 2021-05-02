@@ -1,6 +1,7 @@
 {
   "name": "react-gql-apis",
-  "version": "0.1.0",
+  "version": "0.2.0-a",
+  "author": "Omar del Real Ouldam",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.3.16",
