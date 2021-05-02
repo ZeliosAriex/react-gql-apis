@@ -43,7 +43,7 @@ export type State = {
  * Example:
  * { type: 'INCREMENT'; payload: number }
  */
-export type InnerActions = any
+export type InnerActions = never
 
 /**
  * This are syncronous actions that will be triggered from a thunk

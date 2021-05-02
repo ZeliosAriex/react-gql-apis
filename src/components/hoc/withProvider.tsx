@@ -2,7 +2,7 @@
 import React, { ComponentType } from 'react'
 import { getDisplayName } from '../../utils/hocs'
 
-const withProvider = (Component: ComponentType, Provider: any) => {
+const withProvider = (Component: ComponentType, Provider: ComponentType) => {
   const ComponentWithProvider = ({ ...props }) => {
     return (
       <Provider>
