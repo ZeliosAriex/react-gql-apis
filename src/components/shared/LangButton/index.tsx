@@ -3,7 +3,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import IconButton from '../IconButton'
 import { LangIcon } from '../../../assets/icons/smart/LangIcon'
-import { LS_LANG_KEY } from '../../../util/constants'
+import { LS_LANG_KEY } from '../../../utils/constants'
 
 const LangButton = () => {
   const { i18n } = useTranslation()

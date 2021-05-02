@@ -1,7 +1,7 @@
 import React, { createContext, PropsWithChildren, useEffect } from 'react'
 import { ContextType } from './types'
 import { useToggle } from '../../hooks/useToggle'
-import { LS_DARKMODE_KEY } from '../../util/constants'
+import { LS_DARKMODE_KEY } from '../../utils/constants'
 
 const DarkModeContext = createContext<ContextType>({} as ContextType)
 

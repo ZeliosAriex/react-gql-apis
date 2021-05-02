@@ -10,7 +10,7 @@ const CountriesDirectoryPage = lazy(() => import('../pages/CountriesDirectory'))
 const Routes = (): JSX.Element => {
   return (
     <Suspense fallback={<Spinner />}>
-      <Router id='root-router'>
+      <Router>
         <HomePage path='/' />
         <AnimeDirectoryPage path='/anime' />
         <CountriesDirectoryPage path='/countries' />
