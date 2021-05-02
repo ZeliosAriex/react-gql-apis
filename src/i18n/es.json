@@ -1,6 +1,7 @@
 {
   "general": {
-    "appTitle": "GraphQL APIs"
+    "appTitle": "GraphQL APIs",
+    "loading": "Cargando"
   },
   "routes": {
     "anime": {
@@ -24,5 +25,8 @@
       "title": "Directorio de Países",
       "shortTitle": "Países"
     }
+  },
+  "errors": {
+    "general": "Ups algo no salió bien"
   }
 }

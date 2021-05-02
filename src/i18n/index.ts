@@ -2,7 +2,7 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import englishTranslations from './en.json'
 import spanishTranslations from './es.json'
-import { LS_LANG_KEY } from '../util/constants'
+import { LS_LANG_KEY } from '../utils/constants'
 
 // Cargamos las traducciones que se encuentran en los JSON
 const resources = {

@@ -1,18 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Helmet } from 'react-helmet'
+import { Toaster } from 'react-hot-toast'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { DarkModeProvider } from './contexts/darkMode'
 import './styles'
 import './i18n'
+import { CountriesProvider } from './contexts/countries'
 
 ReactDOM.render(
   <React.StrictMode>
-    <DarkModeProvider>
-      <Helmet titleTemplate='%s | GraphQL APIs' defaultTitle='GraphQL APIs' />
-      <App />
-    </DarkModeProvider>
+    <HelmetProvider>
+      <DarkModeProvider>
+        <CountriesProvider>
+          <Helmet
+            titleTemplate='%s | GraphQL APIs'
+            defaultTitle='GraphQL APIs'
+          />
+          <Toaster position='bottom-center' />
+          <App />
+        </CountriesProvider>
+      </DarkModeProvider>
+    </HelmetProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )

@@ -15,7 +15,6 @@ export const GlobalStyle = ({ theme }: GlobalStyleProps): JSX.Element => {
     html {
       box-sizing: border-box;
       font-size: ${theme.fonts.baseSize};
-      height: 100%;
     }
 
     body {
@@ -27,8 +26,8 @@ export const GlobalStyle = ({ theme }: GlobalStyleProps): JSX.Element => {
       -moz-osx-font-smoothing: grayscale;
       background-color: ${theme.colors.background};
       color: ${theme.colors.title};
-      height: 100%;
       transition: ${theme.transitions.backgroundColor};
+      line-height: 1.2;
     }
 
     path {
@@ -50,15 +49,6 @@ export const GlobalStyle = ({ theme }: GlobalStyleProps): JSX.Element => {
         text-decoration: underline;
         color: ${theme.colors.primaryDark};
       }
-    }
-
-    #root {
-      height: 100%;
-    }
-
-    // Workaround: Reach router adds this element, i want to target it to set his height
-    #root-router {
-      height: 100%;
     }
 
     /* With this we can increase lightly all the components based on the screen size */
