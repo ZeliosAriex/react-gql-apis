@@ -1,0 +1,57 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "es6": true,
+    "jest": true,
+    "browser": true
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "jest"
+  ],
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:sonarjs/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "rules": {
+    "linebreak-style": "off",
+    "import/prefer-default-export": "off",
+    "no-param-reassign": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/require-default-props": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      },
+      {
+        "usePrettierrc": true
+      }
+    ],
+    "no-console": "warn"
+  }
+}

@@ -27,3 +27,11 @@ yarn-error.log*
 # IDEs
 .idea
 .vscode
+
+# Environment
+.env*
+# Do not ignore this file
+!.env.example
+
+# Netlify
+.netlify

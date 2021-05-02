@@ -1,0 +1,32 @@
+{
+  "general": {
+    "appTitle": "GraphQL APIs",
+    "loading": "Loading"
+  },
+  "routes": {
+    "anime": {
+      "name": "Anime"
+    },
+    "countries": {
+      "name": "Countries"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Welcome to GraphQL APIs",
+      "shortTitle": "Home",
+      "subtitle": "A React app that queries GraphQL APIs"
+    },
+    "anime": {
+      "title": "Anime Directory",
+      "shortTitle": "Anime"
+    },
+    "countries": {
+      "title": "Countries Directory",
+      "shortTitle": "Countries"
+    }
+  },
+  "errors": {
+    "general": "Oops something went wrong"
+  }
+}

@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react'
+import { ThemeProvider } from '@emotion/react'
+import { GlobalStyle } from './styles/global'
+import Routes from './routes'
+import { appDarkTheme, appTheme } from './styles/theme'
+import { DarkModeContext } from './contexts/darkMode'
 
-function App() {
+const App = (): JSX.Element => {
+  const { darkMode } = useContext(DarkModeContext)
+  const theme = darkMode ? appDarkTheme : appTheme
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <Routes />
+      <GlobalStyle theme={theme} />
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
