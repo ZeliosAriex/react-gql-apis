@@ -1,45 +1,21 @@
-/** @jsxImportSource @emotion/react */
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { CSSObject } from '@emotion/styled'
 import { BaseProps } from '../../../types'
 import useToast from '../../../hooks/useToast'
-import { ErrorIcon } from '../../../assets/icons/smart/ErrorIcon'
+import ErrorDisplayer from '../ErrorDisplayer'
 
 type AsyncDataDisplayerProps = BaseProps & {
   data: unknown[]
+  loading?: boolean
   error?: string
   options?: {
     customErrorMessage?: string
   }
 }
 
-const ErrorDisplayer = ({
-  message,
-  customMessage,
-}: {
-  message: string
-  customMessage?: string
-}) => {
-  const wrapperStyles = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '2rem',
-  } as CSSObject
-  const errorIconStyles = { width: '5rem', marginBottom: '1rem' }
-  return (
-    <div css={wrapperStyles}>
-      <ErrorIcon css={errorIconStyles} />
-      {customMessage && <p>{customMessage}</p>}
-      <p>{message}</p>
-    </div>
-  )
-}
-
 const AsyncDataDisplayer = ({
   data,
+  loading,
   error,
   children,
   options,
@@ -54,15 +30,15 @@ const AsyncDataDisplayer = ({
     [error]
   )
 
-  if (error)
+  if (error || !data)
     return (
       <ErrorDisplayer
-        message={error}
+        message={error || 'Error: data undefined'}
         customMessage={options?.customErrorMessage}
       />
     )
-  if (!data.length) return <span>{`${t('general.loading')}...`}</span>
-  return <>{children}</>
+  if (loading) return <span>{`${t('general.loading')}...`}</span>
+  return data && data.length ? <>{children}</> : null
 }
 
 export default AsyncDataDisplayer

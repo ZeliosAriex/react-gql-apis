@@ -27,6 +27,11 @@ const useRoutes = () => {
         url: '/countries',
         name: t('routes.countries.name'),
       },
+      rickAndMorty: {
+        key: 'rickAndMorty',
+        url: '/rick-and-morty',
+        name: 'Rick & Morty',
+      },
     })
   }, [t])
 

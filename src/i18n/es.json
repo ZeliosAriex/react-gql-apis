@@ -5,7 +5,7 @@
   },
   "routes": {
     "anime": {
-      "name": "Anime"
+      "name": "Animes"
     },
     "countries": {
       "name": "Países"
@@ -18,12 +18,19 @@
       "subtitle": "Una app en React que consulta APIs de GraphQL"
     },
     "anime": {
-      "title": "Directorio de Anime",
-      "shortTitle": "Anime"
+      "title": "Directorio de Animes",
+      "shortTitle": "Animes",
+      "subtitle": "Un lista de los animes más populares del momento"
     },
     "countries": {
       "title": "Directorio de Países",
-      "shortTitle": "Países"
+      "shortTitle": "Países",
+      "subtitle": "Todos los países del mundo"
+    },
+    "rickAndMorty": {
+      "title": "Rick and Morty",
+      "shortTitle": "Rick and Morty",
+      "subtitle": "Toda la información sobre mi serie favorita"
     }
   },
   "errors": {

@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client/core'
 
-export const ALL_COUNTRIES_NAMES_QUERY = gql`
+export const getAllCountries = () => gql`
   {
     countries {
       name
