@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
@@ -8,6 +9,8 @@ import useFetchCountries from '../../contexts/countries/hooks/useFetchCountries'
 import AsyncDataDisplayer from '../../components/shared/AsyncDataDisplayer'
 import Spacer from '../../components/shared/Spacer'
 import SubTitle from '../../components/shared/SubTitle'
+import FlexContainer from '../../components/shared/FlexContainer'
+import Card from '../../components/shared/Card/Card'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CountriesDirectoryPage = (props: PageBaseProps) => {
@@ -17,11 +20,9 @@ const CountriesDirectoryPage = (props: PageBaseProps) => {
   // TODO: Make components
   const renderCountriesList = () => (
     <AsyncDataDisplayer data={data} error={error} loading={loading}>
-      <ul>
-        {data.map(c => (
-          <li key={c.code + c.name}>{c.name}</li>
-        ))}
-      </ul>
+      {data.map(c => (
+        <Card key={c.code + c.name}>{c.name}</Card>
+      ))}
     </AsyncDataDisplayer>
   )
 
@@ -34,7 +35,10 @@ const CountriesDirectoryPage = (props: PageBaseProps) => {
 
       <Spacer size='2rem' />
 
-      {renderCountriesList()}
+      <FlexContainer
+        css={{ justifyContent: 'space-evenly', alignItems: 'flex-start' }}>
+        {renderCountriesList()}
+      </FlexContainer>
     </DefaultLayout>
   )
 }

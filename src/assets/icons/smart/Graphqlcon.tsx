@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React, { useContext } from 'react'
 import { DarkModeContext } from '../../../contexts/darkMode'
 import { SvgProps } from './types'

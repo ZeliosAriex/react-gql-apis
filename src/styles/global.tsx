@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions,react/jsx-props-no-spreading */
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import React from 'react'
 import { css, Global, Theme } from '@emotion/react'
 import { mq } from './util'
@@ -27,7 +27,7 @@ export const GlobalStyle = ({ theme }: GlobalStyleProps) => {
       background-color: ${theme.colors.background};
       color: ${theme.colors.title};
       transition: ${theme.transitions.backgroundColor};
-      line-height: 1.2;
+      line-height: 1.5;
     }
 
     path {

@@ -3,6 +3,9 @@
     "appTitle": "GraphQL APIs",
     "loading": "Loading"
   },
+  "words": {
+    "episodes": "Episodios"
+  },
   "routes": {
     "anime": {
       "name": "Anime"
