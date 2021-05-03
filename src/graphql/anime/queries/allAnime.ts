@@ -14,13 +14,21 @@ export const getAllAnime = () => gql`
         id
         title {
           english
-          romaji
-          native
+        }
+        episodes
+        nextAiringEpisode {
+          episode
         }
         format
         status
-        popularity
-        countryOfOrigin
+        averageScore
+        tags {
+          name
+        }
+        coverImage {
+          large
+          medium
+        }
       }
     }
   }

@@ -27,6 +27,14 @@ declare module '@emotion/react' {
       backgroundLight: string
       inputBackground: string
     }
+
+    components: {
+      tag: {
+        backgroundColor: string
+        textColor: string
+      }
+    }
+
     transitions: {
       color: string
       backgroundColor: string

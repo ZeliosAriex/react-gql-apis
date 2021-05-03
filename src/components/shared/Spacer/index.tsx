@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 /** @jsxImportSource @emotion/react */
 import React from 'react'
 import { BaseProps } from '../../../types'

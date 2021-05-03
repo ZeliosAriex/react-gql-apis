@@ -6,13 +6,19 @@ export type Anime = {
   id: number
   title: {
     english: string
-    romaji: string
-    native: string
+  }
+  episodes: number
+  nextAiringEpisode: {
+    episode: number
   }
   format: string
   status: string
-  popularity: number
-  countryOfOrigin: string
+  averageScore: number
+  tags: [{ name: string }]
+  coverImage: {
+    large: string
+    medium: string
+  }
 }
 
 export type State = BaseState<Anime>

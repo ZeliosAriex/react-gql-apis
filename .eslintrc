@@ -43,6 +43,7 @@
     "no-param-reassign": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
     "prettier/prettier": [
       "error",
       {
