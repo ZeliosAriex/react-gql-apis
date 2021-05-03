@@ -27,6 +27,13 @@ export const appTheme: Theme = {
     inputBackground: '#EFF0F6',
   },
 
+  components: {
+    tag: {
+      backgroundColor: '#C4C4C4',
+      textColor: '#636363',
+    },
+  },
+
   transitions: {
     color: 'color .3s ease-out',
     backgroundColor: 'background-color .3s ease-out',
@@ -56,5 +63,12 @@ export const appDarkTheme: Theme = {
     background: '#121212',
     backgroundLight: '#1a1a1a',
     inputBackground: '#EFF0F6',
+  },
+
+  components: {
+    tag: {
+      backgroundColor: '#343434',
+      textColor: '#c4c4c4',
+    },
   },
 }

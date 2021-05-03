@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React, { ComponentType } from 'react'
 import { getDisplayName } from '../../utils/hocs'
 

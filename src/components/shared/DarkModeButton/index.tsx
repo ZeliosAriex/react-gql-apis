@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 /** @jsxImportSource @emotion/react */
 import React, { useContext } from 'react'
 import { DarkModeContext } from '../../../contexts/darkMode'

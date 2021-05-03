@@ -11,6 +11,7 @@ export const Wrapper = styled.header`
   box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 10%);
   z-index: 10;
   display: flex;
+  flex-flow: wrap;
   align-items: center;
   position: sticky;
   top: 0;
@@ -21,7 +22,15 @@ export const BrandLink = styled(Link)`
   display: flex;
   align-items: center;
   user-select: none;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 1rem;
   color: ${({ theme }) => theme.colors.title};
+
+  ${mq.md} {
+    width: inherit;
+    margin-bottom: 0;
+  }
 
   &:hover {
     text-decoration: none;
@@ -53,9 +62,9 @@ export const NavItems = styled.ul`
   list-style: none;
   display: flex;
   align-items: center;
-  margin-left: 1.5rem;
 
   ${mq.md} {
+    margin-left: 1.5rem;
     margin-left: 3rem;
   }
 `

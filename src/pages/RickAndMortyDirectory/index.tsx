@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
@@ -10,6 +11,8 @@ import SubTitle from '../../components/shared/SubTitle'
 import useFetchCharacters from '../../contexts/rickAndMorty/hooks/useFetchCharacters'
 import withProvider from '../../components/hoc/withProvider'
 import { RickAndMortyProvider } from '../../contexts/rickAndMorty'
+import Card from '../../components/shared/Card/Card'
+import FlexContainer from '../../components/shared/FlexContainer'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const RickAndMortyDirectory = (props: PageBaseProps) => {
@@ -21,11 +24,9 @@ const RickAndMortyDirectory = (props: PageBaseProps) => {
   // TODO: Make components
   const renderCountriesList = () => (
     <AsyncDataDisplayer data={data} error={error} loading={loading}>
-      <ul>
-        {data.map(c => (
-          <li key={c.id}>{c.name}</li>
-        ))}
-      </ul>
+      {data.map(c => (
+        <Card key={c.id}>{c.name}</Card>
+      ))}
     </AsyncDataDisplayer>
   )
 
@@ -38,7 +39,10 @@ const RickAndMortyDirectory = (props: PageBaseProps) => {
 
       <Spacer size='2rem' />
 
-      {renderCountriesList()}
+      <FlexContainer
+        css={{ justifyContent: 'space-evenly', alignItems: 'flex-start' }}>
+        {renderCountriesList()}
+      </FlexContainer>
     </DefaultLayout>
   )
 }
